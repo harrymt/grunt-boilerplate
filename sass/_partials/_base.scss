@@ -1,4 +1,44 @@
 
+// Project colours to Mark separate projects
+$flat-turquoise: #1abc9c;
+$flat-emerald: #1abc9c;
+$flat-orange: #e67e22;
+$flat-yellow: #f39c12;
+$flat-blue: #2980b9;
+$flat-purple: #9b59b6;
+$flat-grey: #95a5a6;
+
+
+body {
+    background-color: $flat-blue;
+    color: #fff;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
 h1 {
-    font-size: 20px;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+p,
+h1,
+h2 {
+    text-align: center;
+}
+
+html,
+body,
+.wrapper {
+    height: 100%;
+}
+
+.wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto 20%;
 }
