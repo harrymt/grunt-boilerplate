@@ -64,8 +64,9 @@ module.exports = function (grunt) {
       },
       dist: {
         src: [
+          'js/jquery-2.1.4.min.js',
           'js/main.js'
-        ], // 'js/jquery.min.js',
+        ],
         dest: 'main.min.js'
       }
     },
