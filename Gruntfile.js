@@ -25,6 +25,7 @@ module.exports = function (grunt) {
         src: [
           'parts/html-head.html',
           'parts/main.html',
+          'parts/footer.html',
           'parts/html-foot.html'
         ], // In order of concat.
         dest: 'build.html'
@@ -65,6 +66,7 @@ module.exports = function (grunt) {
       dist: {
         src: [
           'js/jquery-2.1.4.min.js',
+          'js/ga.js',
           'js/main.js'
         ],
         dest: 'main.min.js'

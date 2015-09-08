@@ -30,15 +30,24 @@ h2 {
 }
 
 html,
-body,
 .wrapper {
     height: 100%;
 }
 
 .wrapper {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto 20%;
+    margin: 10% 20%;
+}
+
+
+footer {
+    bottom: 0;
+    color: #eee;
+    font-size: 11px;
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+
+    a {
+        color: #eee;
+    }
 }
