@@ -1,8 +1,8 @@
 
 ## Initial setup for grunt projects
 1. Launch Github's automatic page generator
-2. Move this branch over to replace everything on gh-pages
-3. Go to harrymt.com/{Project Name}
+2. Clone this repo
+3. (optional) Add a CNAME file containing a domain name, and point the domain nameservers to GitHub, then you can navigate to that domain and see the website.
 
 ## Contains
  * [Font Awesome 4.3.0](https://fortawesome.github.io/Font-Awesome/)
