@@ -14,6 +14,8 @@
     "grunt-contrib-uglify": "^0.9.1",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-scss-lint": "^0.3.8",
-    "grunt-serve": "^0.1.6"
+    "grunt-serve": "^0.1.6",
+    "jit-grunt": "^0.10.0",
+    "time-grunt": "^1.4.0"
   }
 }

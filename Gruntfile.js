@@ -1,10 +1,17 @@
 module.exports = function (grunt) {
+  'use strict';
 
-  grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json')
+  // Show running time of tasks
+  require('time-grunt')(grunt);
+
+  // Load grunt tasks just in time for speed
+  require('jit-grunt')(grunt, {
+    scsslint: 'grunt-scss-lint', // Because scss-lint has a - in it
   });
 
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+
     htmlmin: { // Minify HTML
       dist: {
         options: {
@@ -101,6 +108,17 @@ module.exports = function (grunt) {
         files: ['js/*.js'],
         tasks: ['concat', 'uglify']
       }
+    },
+    imagemin: {
+      files: [
+        {
+          expand: true,  // Enable dynamic expansion.
+          cwd: 'img/',      // Src matches are relative to this path.
+          src: ['*.png'], // Actual pattern(s) to match.
+          dest: 'img/',   // Destination path prefix.
+          ext: '.png'   // Dest filepaths will have this extension.
+        }
+      ]
     }
   });
 
@@ -110,11 +128,11 @@ module.exports = function (grunt) {
   grunt.renameTask('concat', 'concatHTML');
   // Concatenate JS
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-htmlmin'); // Minify HTML
-  grunt.loadNpmTasks('grunt-contrib-uglify'); // Minify JS
-  grunt.loadNpmTasks('grunt-contrib-sass'); // Process Sass files
-  grunt.loadNpmTasks('grunt-scss-lint'); // SCSS Lint sass files
-  grunt.loadNpmTasks('grunt-contrib-watch'); // On file update, do task
+  // grunt.loadNpmTasks('grunt-contrib-htmlmin'); // Minify HTML
+  // grunt.loadNpmTasks('grunt-contrib-uglify'); // Minify JS
+  // grunt.loadNpmTasks('grunt-contrib-sass'); // Process Sass files
+  // grunt.loadNpmTasks('grunt-scss-lint'); // SCSS Lint sass files
+  // grunt.loadNpmTasks('grunt-contrib-watch'); // On file update, do task
   grunt.loadNpmTasks('grunt-serve'); // Local server
 
   grunt.registerTask('default', [
