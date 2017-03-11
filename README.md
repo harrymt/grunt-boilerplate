@@ -1,9 +1,14 @@
 
-## Initial setup for grunt projects
+# Setup for grunt projects
 1. Launch Github's automatic page generator
 2. Clone this repo
 3. (optional) Add a CNAME file containing a domain name, and point the domain nameservers to GitHub, then you can navigate to that domain and see the website.
 
+
+## Run
+
+- `grunt b`
+- `grunt serve`
 
 ## Edit
 
